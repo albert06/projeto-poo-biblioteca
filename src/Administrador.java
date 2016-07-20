@@ -1,9 +1,10 @@
 
 public class Administrador extends Usuario{
-
-	public Administrador(int codUsuario, String nome, String endereco, String cpf) {
+	String loguin, senha;
+	public Administrador(int codUsuario, String nome, String endereco, String cpf, String loguin, String senha) {
 		super(codUsuario, nome, endereco, cpf);
-		// TODO Auto-generated constructor stub
+		this.loguin = loguin;
+		this.senha = senha;
 	}
 	   
 }
