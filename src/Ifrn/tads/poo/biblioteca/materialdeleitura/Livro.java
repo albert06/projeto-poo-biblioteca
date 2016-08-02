@@ -1,0 +1,29 @@
+package Ifrn.tads.poo.biblioteca.materialdeleitura;
+import java.lang.Integer;
+public class Livro extends ItemAcervo{
+	String titulo, autor, isbn;
+	
+	Integer edicao; 
+	public Livro(String titulo, String autor, String isbn, Integer edicao, int cdg){
+		this.titulo = titulo;
+		this.autor = autor;
+		this.isbn = isbn;
+		this.edicao = edicao;
+		this.codigoItem = cdg;
+	}
+	public String getISBN(){
+		return this.isbn;
+	}
+	public String getTitulo(){
+		return this.titulo;
+	}
+	public String getAutor(){
+		return this.autor;
+	}
+	public Integer getEdi(){
+		return this.edicao;
+	}
+	public int getCdg(){
+		return this.codigoItem;
+	}	
+}
