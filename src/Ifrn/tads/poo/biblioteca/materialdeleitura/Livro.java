@@ -1,15 +1,16 @@
 package Ifrn.tads.poo.biblioteca.materialdeleitura;
 import java.lang.Integer;
 public class Livro extends ItemAcervo{
-	String titulo, autor, isbn;
+	String isbn;
 	
 	Integer edicao; 
-	public Livro(String titulo, String autor, String isbn, Integer edicao, int cdg){
+	public Livro(String titulo, String autor, String isbn, Integer edicao, int cdg, double custo){
 		this.titulo = titulo;
 		this.autor = autor;
 		this.isbn = isbn;
 		this.edicao = edicao;
 		this.codigoItem = cdg;
+		this.custo = custo;
 	}
 	public String getISBN(){
 		return this.isbn;
@@ -25,5 +26,5 @@ public class Livro extends ItemAcervo{
 	}
 	public int getCdg(){
 		return this.codigoItem;
-	}	
+	}
 }
