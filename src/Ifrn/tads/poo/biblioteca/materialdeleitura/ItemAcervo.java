@@ -7,7 +7,7 @@ public abstract class ItemAcervo{
 	Date dataAluguel,dataDevolucao;
 	Calendar cal = Calendar.getInstance();
 	int codigoItem;
-	
+	String autor, titulo;
 	public void setCusto(double custo){
 		this.custo = custo;
 	}
@@ -26,10 +26,19 @@ public abstract class ItemAcervo{
 	public void setDataDevolucao(Date data){
 		this.dataDevolucao = data;
 	}
-	public void alugar(Date dataAluguel, int prazo){
-		this.dataAluguel = dataAluguel;
-		this.cal.setTime(dataAluguel);
-		this.cal.add(Calendar.DAY_OF_MONTH, prazo);
-		this.dataDevolucao  = this.cal.getTime();
+	public Date getDataAluguel(){
+		return this.dataAluguel;
 	}
+	public Date getDataDevolucao(){
+		return this.dataDevolucao;		
+	}
+	public String getTitulo(){
+		return this.titulo;
+	}
+	public String getAutor(){
+		return this.autor;
+	}
+	public void setPago(boolean ent){
+		this.pago = ent;
+	}	
 }
