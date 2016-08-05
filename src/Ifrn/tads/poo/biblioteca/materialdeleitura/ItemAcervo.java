@@ -28,6 +28,18 @@ public abstract class ItemAcervo{
 	}
 	public Date getDataAluguel(){
 		return this.dataAluguel;
+<<<<<<< HEAD
+=======
+	}
+	public Date getDataDevolucao(){
+		return this.dataDevolucao;		
+	}
+	public String getTitulo(){
+		return this.titulo;
+	}
+	public String getAutor(){
+		return this.autor;
+>>>>>>> origin/master
 	}
 	public Date getDataDevolucao(){
 		return this.dataDevolucao;		

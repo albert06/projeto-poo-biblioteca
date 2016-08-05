@@ -5,7 +5,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+<<<<<<< HEAD
 import java.util.Scanner;
+=======
+>>>>>>> origin/master
 
 import Ifrn.tads.poo.biblioteca.materialdeleitura.*;
 import Ifrn.tads.poo.biblioteca.usuarios.Administrador;
@@ -135,6 +138,7 @@ public class Biblioteca {
 		}
 		this.livros.put(novo, qtd);
 	}
+<<<<<<< HEAD
 	public void alugar(ItemAcervo alugado,Date dataAluguel, int prazo, int cod, Scanner sc){
 		
 		Usuario vaiAlugar = null;
@@ -144,6 +148,10 @@ public class Biblioteca {
 			pago = sc.next();
 		if((pago == "s") || (pago == "S"))
 			alugado.setPago(true);		
+=======
+	public void alugar(ItemAcervo alugado,Date dataAluguel, int prazo, int cod){
+		Usuario vaiAlugar = null;
+>>>>>>> origin/master
 		alugado.setDataAluguel(dataAluguel);
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(dataAluguel);
@@ -155,6 +163,7 @@ public class Biblioteca {
 			this.livros.put((Livro)alugado, new Integer(this.livros.get((Livro)alugado).intValue() - 1));
 		else if(alugado instanceof Texto)
 			this.textos.put((Texto)alugado, new Integer(this.textos.get((Texto)alugado).intValue() - 1));
+<<<<<<< HEAD
 		else if(alugado instanceof Apostila)
 			this.apostilas.put((Apostila)alugado, new Integer(this.apostilas.get((Apostila)alugado).intValue() - 1));
 		
@@ -171,6 +180,10 @@ public class Biblioteca {
 		
 		return dias;
 		
+=======
+		
+		this.apostilas.put((Apostila)alugado, new Integer(this.apostilas.get((Apostila)alugado).intValue() - 1));
+>>>>>>> origin/master
 	}
 	public int veriUsu(Usuario usu){
 		int valor = 0,i;		
@@ -188,7 +201,10 @@ public class Biblioteca {
 				break;
 			}else if(usu.getCPF() == liUsu[(liUsu.length - 1) - i].getCPF()){
 				valor = 2;
+<<<<<<< HEAD
 				
+=======
+>>>>>>> origin/master
 				break;
 			}
 		}

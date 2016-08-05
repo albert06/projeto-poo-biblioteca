@@ -1,5 +1,8 @@
 package Ifrn.tads.poo.biblioteca.sistema;
+<<<<<<< HEAD
 import java.text.DateFormat;
+=======
+>>>>>>> origin/master
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -18,12 +21,17 @@ public class SistemaBiblioteca {
 		}
 		biblioteca.addAdm(adm);
 	}
+<<<<<<< HEAD
 	public static void devolver(int codUsu,Biblioteca biblioteca, Scanner sc, ItemAcervo alugado){
+=======
+	public static void devolver(int codUsu,Biblioteca biblioteca, Scanner sc){
+>>>>>>> origin/master
 		Usuario usu = null;
 		int dev = 0;
 		usu = biblioteca.buscaUsuario(codUsu);
 		ItemAcervo[] aluPeUsu = new ItemAcervo[usu.qtdAlugados()];
 		aluPeUsu = usu.listaAlugados();
+<<<<<<< HEAD
 	    System.out.println("Digite uma data nesse formato dd/mm/yyyy: ");
 		String dataRecebida = sc.nextLine();
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");  
@@ -36,6 +44,8 @@ public class SistemaBiblioteca {
 			System.out.println("Pagar? S/N");
 			if(sc.hasNext())
 		}
+=======
+>>>>>>> origin/master
 		System.out.println("Escolha o item a ser devolvido: ");
 		for(int i = 0; i < aluPeUsu.length; i++){
 			System.out.printf("Cod: %d, Titulo: %s",aluPeUsu[i].getCodigoItem(),aluPeUsu[i].getTitulo());
@@ -46,7 +56,11 @@ public class SistemaBiblioteca {
 			biblioteca.adicionarLivro((Livro) aluPeUsu[dev], new Integer(1));
 		}else if(aluPeUsu[dev] instanceof Apostila){
 			biblioteca.adicionarApostila((Apostila) aluPeUsu[dev], new Integer(1));
+<<<<<<< HEAD
 		}else if(aluPeUsu[dev] instanceof Texto)
+=======
+		}else
+>>>>>>> origin/master
 			biblioteca.adicionarTexto((Texto) aluPeUsu[dev], new Integer(1));
 		usu.devolver(aluPeUsu[dev]);
 		
@@ -57,7 +71,10 @@ public class SistemaBiblioteca {
 		Date data = new Date();
 		switch(tipo){
 			case 1:
+<<<<<<< HEAD
 				
+=======
+>>>>>>> origin/master
 				Livro listaL[] = new Livro[biblioteca.tamLivros()];
 				listaL = biblioteca.listLivros();									
 				System.out.println("Livros disponiveis\n");
